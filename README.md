@@ -1,4 +1,4 @@
-# Property-Based Testing for Summation
+# Property-Based Testing and Model Checking for Summation
 
 This repository contains a very simple example of testing a summation function
 using property-based testing and model checking. This experiment is inspired by
