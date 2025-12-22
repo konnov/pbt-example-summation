@@ -27,6 +27,11 @@ InitMath ==
     /\ y \in Int
     /\ z \in Int
 
+InitNat ==
+    /\ x \in Nat
+    /\ y \in Nat
+    /\ z \in Nat
+
 Init32 ==
     /\ x \in 0..(2^32 - 1)
     /\ y \in 0..(2^32 - 1)
