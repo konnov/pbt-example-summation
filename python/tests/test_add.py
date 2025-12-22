@@ -3,7 +3,7 @@
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from pbt_add import add, add_is_always_zero, add32, add64, add256
+from pbt_add import add, add32, add64, add256
 
 @given(st.integers())
 def test_identity(a):
