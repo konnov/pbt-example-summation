@@ -3,27 +3,46 @@
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from pbt_add import add, add32, add64, add256
+from pbt_add import add, add_is_always_zero, add32, add64, add256
 
 
 @given(st.integers())
-def test_identity(a):
+def test_identity_zero(a):
     """Test identity property: a + 0 = a."""
     assert add(a, 0) == a
     assert add(0, a) == a
 
 
 @given(st.integers(), st.integers())
-def test_commutativity(a, b):
+def test_commutativity_zero(a, b):
     """Test commutativity property: a + b = b + a."""
     assert add(a, b) == add(b, a)
 
 
 @given(st.integers(), st.integers(), st.integers())
-def test_associativity(a, b, c):
+def test_associativity_zero(a, b, c):
     """Test associativity property: (a + b) + c = a + (b + c)."""
     assert add(add(a, b), c) == add(a, add(b, c))
 
+# Tests for add_is_always_zero
+
+@given(st.integers())
+def test_identity(a):
+    """Test identity property: a + 0 = a."""
+    assert add_is_always_zero(a, 0) == a
+    assert add_is_always_zero(0, a) == a
+
+
+@given(st.integers(), st.integers())
+def test_commutativity(a, b):
+    """Test commutativity property: a + b = b + a."""
+    assert add_is_always_zero(a, b) == add(b, a)
+
+
+@given(st.integers(), st.integers(), st.integers())
+def test_associativity(a, b, c):
+    """Test associativity property: (a + b) + c = a + (b + c)."""
+    assert add_is_always_zero(add(a, b), c) == add(a, add(b, c))
 
 # Tests for add32 (32-bit natural numbers with wrapping)
 

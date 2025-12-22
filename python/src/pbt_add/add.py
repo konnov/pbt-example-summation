@@ -1,6 +1,10 @@
 """Addition functions."""
 
 
+def add_is_always_zero(_a: int, _b: int) -> int:
+    """Trivial addition, if we only have one element zero."""
+    return 0
+
 def add(a: int, b: int) -> int:
     return a + b
 
