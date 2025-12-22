@@ -13,6 +13,33 @@ files = [
 ]
 
 [[package]]
+name = "cattrs"
+version = "25.3.0"
+description = "Composable complex class support for attrs and dataclasses."
+optional = false
+python-versions = ">=3.9"
+groups = ["dev"]
+files = [
+    {file = "cattrs-25.3.0-py3-none-any.whl", hash = "sha256:9896e84e0a5bf723bc7b4b68f4481785367ce07a8a02e7e9ee6eb2819bc306ff"},
+    {file = "cattrs-25.3.0.tar.gz", hash = "sha256:1ac88d9e5eda10436c4517e390a4142d88638fe682c436c93db7ce4a277b884a"},
+]
+
+[package.dependencies]
+attrs = ">=25.4.0"
+exceptiongroup = {version = ">=1.1.1", markers = "python_version < \"3.11\""}
+typing-extensions = ">=4.14.0"
+
+[package.extras]
+bson = ["pymongo (>=4.4.0)"]
+cbor2 = ["cbor2 (>=5.4.6)"]
+msgpack = ["msgpack (>=1.0.5)"]
+msgspec = ["msgspec (>=0.19.0) ; implementation_name == \"cpython\""]
+orjson = ["orjson (>=3.11.3) ; implementation_name == \"cpython\""]
+pyyaml = ["pyyaml (>=6.0)"]
+tomlkit = ["tomlkit (>=0.11.8)"]
+ujson = ["ujson (>=5.10.0)"]
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
@@ -24,6 +51,78 @@ files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
 ]
+
+[[package]]
+name = "crosshair-tool"
+version = "0.0.101"
+description = "Analyze Python code for correctness using symbolic execution."
+optional = false
+python-versions = ">=3.8"
+groups = ["dev"]
+files = [
+    {file = "crosshair_tool-0.0.101-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:95a448fc876925c614852101db768ff4136bd1cabc2898440d3e191adf0bda50"},
+    {file = "crosshair_tool-0.0.101-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:4c5132457fc85517f95ff772a05596ad45c9b7ad0753939621eb0c9b8476d900"},
+    {file = "crosshair_tool-0.0.101-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:2c9fffd585ad9e314b9519b589bee8137266ce9bbc84fbef626c231e4e67d26b"},
+    {file = "crosshair_tool-0.0.101-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:96194cc5bd3336b00fa76ff01887ec74c42ff76ce05fdf90dcb9b133b1509ec0"},
+    {file = "crosshair_tool-0.0.101-cp310-cp310-musllinux_1_2_x86_64.whl", hash = "sha256:b089b373d56400b176ab3cc1dc396c531fe00c9bede893bfa905f1fa8ab9382e"},
+    {file = "crosshair_tool-0.0.101-cp310-cp310-win32.whl", hash = "sha256:6e24e9140014241c1275f9266fd6a8e9d09b91a9b0b0606eed3b58e6809280af"},
+    {file = "crosshair_tool-0.0.101-cp310-cp310-win_amd64.whl", hash = "sha256:ce9a8ccd2ccc16ec66e69c66d49a722573b7c59d0d3331ccaee1c9e4abf8401e"},
+    {file = "crosshair_tool-0.0.101-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:d7649071d0768156d55fff9c9ff6f5e179d5340463b56129b792ae94bf733c9c"},
+    {file = "crosshair_tool-0.0.101-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:dba6375c4aaed3e7715782b6b2152fc792f700a7474be5bb310469212bedf64b"},
+    {file = "crosshair_tool-0.0.101-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:04378d43a11250bb5423c15ccf86191a0e075cf825b2e7b5ea02cf2509f2b5f5"},
+    {file = "crosshair_tool-0.0.101-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:a852577cd68b548a45635a63f97a433c8793134ee75ca79515e3b4cde44daf09"},
+    {file = "crosshair_tool-0.0.101-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:1ea80e3acfbd6a91b88acabdd18f91f611aedacdd3369656d31dc5c60abf0dd1"},
+    {file = "crosshair_tool-0.0.101-cp311-cp311-win32.whl", hash = "sha256:88bd52e50d149062c3a87bdb46bff4243ce2fd3623e4fb9aa6829a194e8f9950"},
+    {file = "crosshair_tool-0.0.101-cp311-cp311-win_amd64.whl", hash = "sha256:238dbbf44edc3f31d3ad520529b943e39fdf6deb16ab8c166aa95ecccb26412f"},
+    {file = "crosshair_tool-0.0.101-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:e585ef30143dab9a9d131bf7a31a061a3f6425dc6758c7b22d24ec46c9143284"},
+    {file = "crosshair_tool-0.0.101-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:bb7403aacb31df9e86817de589529707f757be857e7ed905f1a8c818b300bad9"},
+    {file = "crosshair_tool-0.0.101-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:f10fa35b409aa06022fc399a31e659cc556ca9b5d933b8c93119aee54856f812"},
+    {file = "crosshair_tool-0.0.101-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:659ebd5a7dfbff5d887cd5c5181d8e574fb72723bdb175e0ff7a1d9fe2cd2e3c"},
+    {file = "crosshair_tool-0.0.101-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:639931207bd13425f4387125b48e550afbd0d73b311f4ae1197b33d05f8df49b"},
+    {file = "crosshair_tool-0.0.101-cp312-cp312-win32.whl", hash = "sha256:cb026922307100c7f861bd575d6b467d3fe377eb9dbdd2cf47589e87b5a12868"},
+    {file = "crosshair_tool-0.0.101-cp312-cp312-win_amd64.whl", hash = "sha256:20ef1abfa39f80c3f15762afa7200d74f2091760e49ff601e7054dac3541ccff"},
+    {file = "crosshair_tool-0.0.101-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:16a3d772f7e34d4704433db2ff760d2c6447b06abf12562be1eecd8b4ad74b1a"},
+    {file = "crosshair_tool-0.0.101-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:32c46e468aea2f42eaea902ea342ea3e5e4cdcf8715b520067ed88c65e79cfae"},
+    {file = "crosshair_tool-0.0.101-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:9963d191c6f390a4f2232ff95ee636bc42d76bb0646a243526b1fdd203a61275"},
+    {file = "crosshair_tool-0.0.101-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:b871be4d0628f1f9e55b6c7319f3785a0bee1aaae73eb1d371fe06bf2f4713cb"},
+    {file = "crosshair_tool-0.0.101-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:fc950c9cd714c320f2b6aa7d26030c367c9fdb9690df770d9acc059729bcc3f9"},
+    {file = "crosshair_tool-0.0.101-cp313-cp313-win32.whl", hash = "sha256:002b348340ee529176cc3e7b94bc76e0be07be62e4fdd1f4edc1bd0e9bb3e3f7"},
+    {file = "crosshair_tool-0.0.101-cp313-cp313-win_amd64.whl", hash = "sha256:0fb3d3c50cfd9489236fbcee583921c784f38ac98ff508be5bd706d16ab2d60c"},
+    {file = "crosshair_tool-0.0.101-cp314-cp314-macosx_10_13_universal2.whl", hash = "sha256:965ee1a51dedd07496b3259c4ae7555c9e1856a941a7017934360736370a4881"},
+    {file = "crosshair_tool-0.0.101-cp314-cp314-macosx_10_13_x86_64.whl", hash = "sha256:bbb015c298c527460225c85d03f3578f6bb65561bd51d8f0ea92ff9d92314b88"},
+    {file = "crosshair_tool-0.0.101-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:eca74aa2b553f80ee1d85ff7beb5cefa4fd64037d10fd887f7a21591820932ec"},
+    {file = "crosshair_tool-0.0.101-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:c7ea8d4e75aef8c2655cc4b686bc8a685b00d5691f553c0486d76754de8abbea"},
+    {file = "crosshair_tool-0.0.101-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:a7829a42f32452de508b4f75201223637b7d9452eb2cac4d89302196e1a75d5d"},
+    {file = "crosshair_tool-0.0.101-cp314-cp314-win32.whl", hash = "sha256:fa6d46b7498cb855f43087374e978e9d6048338966c92aff3423cbd2239801e6"},
+    {file = "crosshair_tool-0.0.101-cp314-cp314-win_amd64.whl", hash = "sha256:23582783eca66fad8e139eb46f4cefac603456452b324e4ef0572aabc71ec19b"},
+    {file = "crosshair_tool-0.0.101-cp38-cp38-macosx_10_9_universal2.whl", hash = "sha256:07ed4c71dea683f061a75ebc44702b387b666848c4e5b312afa0a4f1439ea03e"},
+    {file = "crosshair_tool-0.0.101-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:dbeb86fbaa4537dbbc92c23aaa418b28bb52fa3b1566b5fe983f70485748fc17"},
+    {file = "crosshair_tool-0.0.101-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:c3283a8a125d6bd602c9b543c03d814d06dc501f68da45158f2f391f2742cd58"},
+    {file = "crosshair_tool-0.0.101-cp38-cp38-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:3345873b32a280c267491cf35ef687029d6e4805ae9344f1526883d1fbe24b50"},
+    {file = "crosshair_tool-0.0.101-cp38-cp38-musllinux_1_2_x86_64.whl", hash = "sha256:5f26b1229998deddebbca22f6c81cbfc95fef201e2052eac6b0af77ede04217e"},
+    {file = "crosshair_tool-0.0.101-cp38-cp38-win32.whl", hash = "sha256:c3f9db8171ea655745c1e92cdc520d21eb09f8e2f5015403b3c83f7fb21fdf8e"},
+    {file = "crosshair_tool-0.0.101-cp38-cp38-win_amd64.whl", hash = "sha256:46781e003e0b579fe1f6d51b8cc6cf74715a4e08233619c04e6e19f22d7c3429"},
+    {file = "crosshair_tool-0.0.101-cp39-cp39-macosx_10_9_universal2.whl", hash = "sha256:60771a5c29ed9b4fc33a788504f8de36da5bf3cc11de386c117e36d4502245b7"},
+    {file = "crosshair_tool-0.0.101-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:1dc57f980046a20ecdcef6950380258d39e7a8fa968fc9c851ec27d0a544ab0f"},
+    {file = "crosshair_tool-0.0.101-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:473e99675d9c370d9f750b34a0f0f54dc8c88000a689cfc9e966770cccaf7001"},
+    {file = "crosshair_tool-0.0.101-cp39-cp39-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:08142586447f05bd26c700fab8ff3afba6948db7bff78670dbfd178b56a004f5"},
+    {file = "crosshair_tool-0.0.101-cp39-cp39-musllinux_1_2_x86_64.whl", hash = "sha256:0c9e3e75a38f42ca9afad9309d3e862a984f04d5ac93326742ce52b2666a3c7f"},
+    {file = "crosshair_tool-0.0.101-cp39-cp39-win32.whl", hash = "sha256:876d36503cf6e848e0fa00166abc85f8d968f5f4593f9bc7eeda17a1df7b77cd"},
+    {file = "crosshair_tool-0.0.101-cp39-cp39-win_amd64.whl", hash = "sha256:44f716635e40fd85a647b11352e72482aa80769b7893a4359ace5af5f7550d5d"},
+    {file = "crosshair_tool-0.0.101.tar.gz", hash = "sha256:c36eb18e211b344b47dc9aaf85d0b16ae4cb00719d20f131eb6ebf5e79767983"},
+]
+
+[package.dependencies]
+importlib_metadata = ">=4.0.0"
+packaging = "*"
+pygls = ">=1.0.0"
+typeshed-client = ">=2.0.5"
+typing_extensions = ">=3.10.0"
+typing-inspect = ">=0.7.1"
+z3-solver = ">=4.13.0.0"
+
+[package.extras]
+dev = ["autodocsumm (>=0.2.2,<1)", "black (==25.9.0)", "deal (>=4.13.0)", "icontract (>=2.4.0)", "isort (==5.11.5)", "mypy (==1.18.1)", "numpy (==1.24.0) ; python_version < \"3.12\"", "numpy (==2.3.3) ; python_version >= \"3.12\"", "pre-commit (>=2.20,<3.0)", "pytest", "pytest-xdist", "rst2pdf (>=0.102)", "setuptools", "sphinx (>=3.4.3)", "sphinx-rtd-theme (>=0.5.1)", "z3-solver (==4.15.4.0)"]
 
 [[package]]
 name = "exceptiongroup"
@@ -80,6 +179,69 @@ watchdog = ["watchdog (>=4.0.0)"]
 zoneinfo = ["tzdata (>=2025.2) ; sys_platform == \"win32\" or sys_platform == \"emscripten\""]
 
 [[package]]
+name = "hypothesis-crosshair"
+version = "0.0.8"
+description = "Level-up your Hypothesis tests with CrossHair."
+optional = false
+python-versions = ">=3.8"
+groups = ["dev"]
+files = [
+    {file = "hypothesis_crosshair-0.0.8-py3-none-any.whl", hash = "sha256:71a54497ca1727a13f6e17f90b227eb1a852804a9bb740c237e653d9d3cd3dec"},
+    {file = "hypothesis_crosshair-0.0.8.tar.gz", hash = "sha256:0ce990cf00d2080f036ac000dda6bbf6e974430b11cc6d5dfda74ef91e417345"},
+]
+
+[package.dependencies]
+crosshair-tool = ">=0.0.58"
+hypothesis = ">=6.104.2"
+
+[[package]]
+name = "importlib-metadata"
+version = "8.7.1"
+description = "Read metadata from Python packages"
+optional = false
+python-versions = ">=3.9"
+groups = ["dev"]
+files = [
+    {file = "importlib_metadata-8.7.1-py3-none-any.whl", hash = "sha256:5a1f80bf1daa489495071efbb095d75a634cf28a8bc299581244063b53176151"},
+    {file = "importlib_metadata-8.7.1.tar.gz", hash = "sha256:49fef1ae6440c182052f407c8d34a68f72efc36db9ca90dc0113398f2fdde8bb"},
+]
+
+[package.dependencies]
+zipp = ">=3.20"
+
+[package.extras]
+check = ["pytest-checkdocs (>=2.4)", "pytest-ruff (>=0.2.1) ; sys_platform != \"cygwin\""]
+cover = ["pytest-cov"]
+doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-lint"]
+enabler = ["pytest-enabler (>=3.4)"]
+perf = ["ipython"]
+test = ["flufl.flake8", "jaraco.test (>=5.4)", "packaging", "pyfakefs", "pytest (>=6,!=8.1.*)", "pytest-perf (>=0.9.2)"]
+type = ["mypy (<1.19) ; platform_python_implementation == \"PyPy\"", "pytest-mypy (>=1.0.1)"]
+
+[[package]]
+name = "importlib-resources"
+version = "6.5.2"
+description = "Read resources from Python packages"
+optional = false
+python-versions = ">=3.9"
+groups = ["dev"]
+files = [
+    {file = "importlib_resources-6.5.2-py3-none-any.whl", hash = "sha256:789cfdc3ed28c78b67a06acb8126751ced69a3d5f79c095a98298cd8a760ccec"},
+    {file = "importlib_resources-6.5.2.tar.gz", hash = "sha256:185f87adef5bcc288449d98fb4fba07cea78bc036455dd44c5fc4a2fe78fed2c"},
+]
+
+[package.dependencies]
+zipp = {version = ">=3.1.0", markers = "python_version < \"3.10\""}
+
+[package.extras]
+check = ["pytest-checkdocs (>=2.4)", "pytest-ruff (>=0.2.1) ; sys_platform != \"cygwin\""]
+cover = ["pytest-cov"]
+doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-lint"]
+enabler = ["pytest-enabler (>=2.2)"]
+test = ["jaraco.test (>=5.4)", "pytest (>=6,!=8.1.*)", "zipp (>=3.17)"]
+type = ["pytest-mypy"]
+
+[[package]]
 name = "iniconfig"
 version = "2.1.0"
 description = "brain-dead simple config-ini parsing"
@@ -89,6 +251,34 @@ groups = ["dev"]
 files = [
     {file = "iniconfig-2.1.0-py3-none-any.whl", hash = "sha256:9deba5723312380e77435581c6bf4935c94cbfab9b1ed33ef8d238ea168eb760"},
     {file = "iniconfig-2.1.0.tar.gz", hash = "sha256:3abbd2e30b36733fee78f9c7f7308f2d0050e88f0087fd25c2645f63c773e1c7"},
+]
+
+[[package]]
+name = "lsprotocol"
+version = "2025.0.0"
+description = "Python types for Language Server Protocol."
+optional = false
+python-versions = ">=3.8"
+groups = ["dev"]
+files = [
+    {file = "lsprotocol-2025.0.0-py3-none-any.whl", hash = "sha256:f9d78f25221f2a60eaa4a96d3b4ffae011b107537facee61d3da3313880995c7"},
+    {file = "lsprotocol-2025.0.0.tar.gz", hash = "sha256:e879da2b9301e82cfc3e60d805630487ac2f7ab17492f4f5ba5aaba94fe56c29"},
+]
+
+[package.dependencies]
+attrs = ">=21.3.0"
+cattrs = "!=23.2.1"
+
+[[package]]
+name = "mypy-extensions"
+version = "1.1.0"
+description = "Type system extensions for programs checked with the mypy type checker."
+optional = false
+python-versions = ">=3.8"
+groups = ["dev"]
+files = [
+    {file = "mypy_extensions-1.1.0-py3-none-any.whl", hash = "sha256:1be4cccdb0f2482337c4743e60421de3a356cd97508abadd57d47403e94f5505"},
+    {file = "mypy_extensions-1.1.0.tar.gz", hash = "sha256:52e68efc3284861e772bbcd66823fde5ae21fd2fdb51c62a211403730b916558"},
 ]
 
 [[package]]
@@ -118,6 +308,26 @@ files = [
 [package.extras]
 dev = ["pre-commit", "tox"]
 testing = ["coverage", "pytest", "pytest-benchmark"]
+
+[[package]]
+name = "pygls"
+version = "2.0.0"
+description = "A pythonic generic language server (pronounced like 'pie glass')"
+optional = false
+python-versions = ">=3.9"
+groups = ["dev"]
+files = [
+    {file = "pygls-2.0.0-py3-none-any.whl", hash = "sha256:b4e54bba806f76781017ded8fd07463b98670f959042c44170cd362088b200cc"},
+    {file = "pygls-2.0.0.tar.gz", hash = "sha256:99accd03de1ca76fe1e7e317f0968ebccf7b9955afed6e2e3e188606a20b4f07"},
+]
+
+[package.dependencies]
+attrs = ">=24.3.0"
+cattrs = ">=23.1.2"
+lsprotocol = "2025.0.0"
+
+[package.extras]
+ws = ["websockets (>=13.0)"]
 
 [[package]]
 name = "pytest"
@@ -208,19 +418,87 @@ files = [
 ]
 
 [[package]]
+name = "typeshed-client"
+version = "2.8.2"
+description = "A library for accessing stubs in typeshed."
+optional = false
+python-versions = ">=3.9"
+groups = ["dev"]
+files = [
+    {file = "typeshed_client-2.8.2-py3-none-any.whl", hash = "sha256:4cf886d976c777689cd31889f13abf5bfb7797c82519b07e5969e541380c75ee"},
+    {file = "typeshed_client-2.8.2.tar.gz", hash = "sha256:9d8e29fb74574d87bf9a719f77131dc40f2aeea20e97d25d4a3dc2cc30debd31"},
+]
+
+[package.dependencies]
+importlib_resources = ">=1.4.0"
+typing-extensions = ">=4.5.0"
+
+[[package]]
 name = "typing-extensions"
 version = "4.15.0"
 description = "Backported and Experimental Type Hints for Python 3.9+"
 optional = false
 python-versions = ">=3.9"
 groups = ["dev"]
-markers = "python_version < \"3.11\""
 files = [
     {file = "typing_extensions-4.15.0-py3-none-any.whl", hash = "sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"},
     {file = "typing_extensions-4.15.0.tar.gz", hash = "sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"},
 ]
 
+[[package]]
+name = "typing-inspect"
+version = "0.9.0"
+description = "Runtime inspection utilities for typing module."
+optional = false
+python-versions = "*"
+groups = ["dev"]
+files = [
+    {file = "typing_inspect-0.9.0-py3-none-any.whl", hash = "sha256:9ee6fc59062311ef8547596ab6b955e1b8aa46242d854bfc78f4f6b0eff35f9f"},
+    {file = "typing_inspect-0.9.0.tar.gz", hash = "sha256:b23fc42ff6f6ef6954e4852c1fb512cdd18dbea03134f91f856a95ccc9461f78"},
+]
+
+[package.dependencies]
+mypy-extensions = ">=0.3.0"
+typing-extensions = ">=3.7.4"
+
+[[package]]
+name = "z3-solver"
+version = "4.15.4.0"
+description = "an efficient SMT solver library"
+optional = false
+python-versions = "*"
+groups = ["dev"]
+files = [
+    {file = "z3_solver-4.15.4.0-py3-none-macosx_13_0_arm64.whl", hash = "sha256:407e825cc9211f95ef46bdc8d151bf630e7ab2d62a21d24cd74c09cc5b73f3aa"},
+    {file = "z3_solver-4.15.4.0-py3-none-macosx_13_0_x86_64.whl", hash = "sha256:00bd10c5a6a5f6112d3a9a810d0799227e52f76caa860dafa5e00966bb47eb13"},
+    {file = "z3_solver-4.15.4.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7e103a6f203f505b8b8b8e5c931cc407c95b61556512d4921c1ddc0b3f41b08e"},
+    {file = "z3_solver-4.15.4.0-py3-none-manylinux_2_34_aarch64.whl", hash = "sha256:62c7e9cbdd711932301f29919ad9158de9b2f58b4d281dd259bbcd0a2f408ba1"},
+    {file = "z3_solver-4.15.4.0-py3-none-win32.whl", hash = "sha256:be3bc916545c96ffbf89e00d07104ff14f78336e55db069177a1bfbcc01b269d"},
+    {file = "z3_solver-4.15.4.0-py3-none-win_amd64.whl", hash = "sha256:00e35b02632ed085ea8199fb230f6015e6fc40554a6680c097bd5f060e827431"},
+    {file = "z3_solver-4.15.4.0.tar.gz", hash = "sha256:928c29b58c4eb62106da51c1914f6a4a55d0441f8f48a81b9da07950434a8946"},
+]
+
+[[package]]
+name = "zipp"
+version = "3.23.0"
+description = "Backport of pathlib-compatible object wrapper for zip files"
+optional = false
+python-versions = ">=3.9"
+groups = ["dev"]
+files = [
+    {file = "zipp-3.23.0-py3-none-any.whl", hash = "sha256:071652d6115ed432f5ce1d34c336c0adfd6a884660d1e9712a256d3d3bd4b14e"},
+    {file = "zipp-3.23.0.tar.gz", hash = "sha256:a07157588a12518c9d4034df3fbbee09c814741a33ff63c05fa29d26a2404166"},
+]
+
+[package.extras]
+check = ["pytest-checkdocs (>=2.4)", "pytest-ruff (>=0.2.1) ; sys_platform != \"cygwin\""]
+cover = ["pytest-cov"]
+doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-lint"]
+enabler = ["pytest-enabler (>=2.2)"]
+test = ["big-O", "jaraco.functools", "jaraco.itertools", "jaraco.test", "more_itertools", "pytest (>=6,!=8.1.*)", "pytest-ignore-flaky"]
+type = ["pytest-mypy"]
+
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.9"
-content-hash = "d9f86240e1eaa522317f5d50420d7dceccb1a137cf2aeac39f70999d3d17f1df"
+content-hash = "87afe4bb94ac77dce4797c0300722c11991e6453ff618d7cfd4bbd481bdc868a"

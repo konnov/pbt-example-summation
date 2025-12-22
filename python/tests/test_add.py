@@ -1,7 +1,8 @@
 """Property-based tests for addition."""
 
-from hypothesis import given, settings
+from hypothesis import given, settings, example
 from hypothesis import strategies as st
+import hypothesis_crosshair_provider
 
 from pbt_add import add, add32, add64, add256
 
@@ -119,6 +120,7 @@ def test_add64_unbounded_inputs_associativity(a, b, c):
 
 @given(st.integers(0))
 @settings(max_examples=100000)
+# @example(2**256)  # This should fail - value at the boundary
 def test_add256_unbounded_inputs_identity(a):
     """Test identity property for add256: a + 0 = a."""
     assert add256(a, 0) == a
