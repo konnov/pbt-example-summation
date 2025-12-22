@@ -1,6 +1,6 @@
 """Property-based tests for addition."""
 
-from hypothesis import given
+from hypothesis import given, settings
 from hypothesis import strategies as st
 
 from pbt_add import add, add32, add64, add256
@@ -120,12 +120,14 @@ def test_add64_unbounded_inputs_associativity(a, b, c):
 # Tests for add256 (256-bit natural numbers with wrapping)
 
 @given(st.integers(0))
+@settings(max_examples=100000)
 def test_add256_unbounded_inputs_identity(a):
     """Test identity property for add256: a + 0 = a."""
     assert add256(a, 0) == a
     assert add256(0, a) == a
 
 @given(st.integers(0), st.integers(0))
+@settings(max_examples=100000)
 def test_add256_unbounded_inputs_commutativity(a, b):
     """Test commutativity property for add256: a + b = b + a."""
     assert add256(a, b) == add256(b, a)
@@ -136,6 +138,7 @@ def test_add256_unbounded_inputs_commutativity(a, b):
     st.integers(0),
     st.integers(0)
 )
+@settings(max_examples=100000)
 def test_add256_unbounded_inputs_associativity(a, b, c):
     """Test associativity property for add256: (a + b) + c = a + (b + c)."""
     assert add256(add256(a, b), c) == add256(a, add256(b, c))
